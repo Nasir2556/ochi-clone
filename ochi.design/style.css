@@ -34,13 +34,6 @@ body{
     }
 }
 /*  */
-.menu-items-cnt-wrapper{
-    top:-120%;
-    transition: all ease 0.5s;
-    & .menu-items-cnt{
-        font-family:Founders-Grotesk;
-    }
-}
 .section-1{
     background-color: var(--white);
     & .nav-anchor-cnt{
@@ -171,6 +164,11 @@ body{
     & .summary_nd_socials_cnt{
         border-bottom: 1px solid #21212163;   
     }
+    & .team-photo{
+        background-image: url(./assets/team.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
 }
 .section-4{
     background-image: url(./assets/eye-bg.jpg);
@@ -192,6 +190,18 @@ body{
                     transition: all ease 1s;
                 }
             }
+            & #first-poster{
+                background-image: url(./assets/pic-1.png);
+            }
+            &  #second-poster{
+                background-image: url(./assets/pic-2.jpg);
+            }
+            &  #third-poster{
+                background-image: url(./assets/pic-3.jpg);
+            }
+            &  #fourth-poster{
+                background-image: url(./assets/pic-4.png);
+            }
             & .poster-links-wrapper{
                 & .blink-parent{
                     &:hover{
@@ -202,6 +212,13 @@ body{
                 }
             }
         }
+    }
+}
+.section-6{
+    & .William-img{
+        background-image: url(./assets/william.png);
+        background-size: cover;
+        background-position: center center;
     }
 }
 #fyde-wrapper,#trawa-wrapper{

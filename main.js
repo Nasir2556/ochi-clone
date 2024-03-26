@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let nav_anchor_before = document.querySelectorAll(".nav-anchor-before");
     let nav_anchor_after = document.querySelectorAll(".nav-anchor-after");
     let nav_anchor_line = document.querySelectorAll(".nav-anchor-line");
-
     for (let i = 0; i < nav_anchor.length; i++) {
         nav_anchor[i].addEventListener("mouseover", function () {
             nav_anchor_line[i].style.cssText =
@@ -71,28 +70,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         last_scroll = current_scroll
     })
-
-    // let menu_items_cnt = document.querySelector(".menu-items-cnt");
     let menu_icon_cnt = document.querySelector(".menu-icon-cnt");
     let menu_icon_1 = document.querySelector(".menu-icon-1");
     let menu_icon_2 = document.querySelector(".menu-icon-2");
+    let menu_items_cnt_wrapper = document.querySelector(".menu-items-cnt-wrapper");
     let menu_flag = 0;
     menu_icon_cnt.addEventListener("click", () => {
 
         if (menu_flag === 0) {
-            // menu_items_cnt.style.height = "100vh";
             menu_flag = 1;
             menu_icon_1.style.cssText = `transform:translateY(0) ;rotate:45deg`;
             menu_icon_2.style.cssText = `transform:translateY(0); rotate:-45deg`;
-
+            menu_items_cnt_wrapper.style.cssText=`top:0%`
         } else {
-            // menu_items_cnt.style.height = 0;
             menu_flag = 0;
             menu_icon_1.style.cssText = `transform:translateY(-4.5px) ;rotate:0deg`;
             menu_icon_2.style.cssText = `transform:translateY(4.5px); rotate:0deg`;
+            menu_items_cnt_wrapper.style.cssText=`top:-120%`
         }
     });
-
     // secnd effct
     let wide_btn_nd_arrow_cnt = document.querySelectorAll(".wide-btn-nd-arrow-cnt");
     let wide_btn = document.querySelectorAll(".wide-btn");
@@ -157,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-
     // third effect
     let blink_parent = document.querySelectorAll(".blink-parent");
     let blink_black = document.querySelectorAll(".blink-black");
@@ -216,15 +211,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-
     // eye effect
     window.addEventListener("mousemove", (e) => {
         let mouseX = e.clientX;
         let mouseY = e.clientY;
-
         let deltaX = mouseX - window.innerWidth / 2;
         let deltaY = mouseY - window.innerHeight / 2;
-
         let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) //57.296 = 1 deg
         // atan2 hume radian me value deta hai and hume usko angle me convet krna pdta h
         // PI ki value 3.14159265 hoti hai

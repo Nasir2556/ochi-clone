@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-black:#000000;
+    --black: #212121;
+    --white: #f1f1f1;
+    --lime: #CDEA68;
+    --green: #004D43;
+    --red:#E73C37;
+}
+@font-face {
+    font-family:Founders-Grotesk ;
+    src: url(fonts/Founders-Grotesk.woff2);
+}
+@font-face {
+    font-family: NeueMontreal-Medium;
+    src: url(fonts/NeueMontreal-Medium.otf);
+}
+@font-face {
+    font-family: NeueMontreal-Regular;
+    src: url(fonts/NeueMontreal-Regular.otf);
+}
+/*  */
+.nav-anchor-cnt{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    padding: 5px 0;
+    & .nav-anchor{
+        position: relative;
+        line-height: normal;
+        overflow: hidden;
+        & span{
+            visibility: hidden;
+        }
+        & .nav-anchor-line{
+            position: absolute;
+            width: 0;
+            height: 0.2px;
+            background-color: #000;
+            bottom: 0;
+            transition: all ease .3s;
+            transition-delay: .28s;
+            z-index: 2;
+            overflow: hidden;
+        }
+        & .nav-anchor-before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition:all ease .3s,
+        }
+        & .nav-anchor-after{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transition:all ease .5s,
+        }
+    }
+}
+/*  */
+.arrow-btn{
+    /* line-height: none; */
+    border: 1px solid black;
+    font-size: 20px;
+    line-height: 20px;
+}
+.arrow-btn-before{
+    scale: 0;
+    background-color: black;
+}
+/*  */
+.sonic-parent{
+    padding: 5px 0;
+    & .sonic-before{
+        left: 0;
+        width: 0;
+        background-color: black;
+        height: 5px;
+    }
+    & .sonic-after{
+        right: 0;
+        width: 100%;
+        background-color: black;
+        height: 5px;
+    }
+    &:hover{
+        & .sonic-after{
+            width: 0;
+            transition: all ease 0.3s;
+        }
+        & .sonic-before{
+            width: 100%;
+            transition: all ease 0.3s;
+            transition-delay: 0.5s;
+        }
+
+    }
+}
+/*  */
+.blink-black{
+    height: 0;
+}
+.blink-dot{
+    scale: 0.3;
+}
+
+.eye-cnt{
+    width: 80vw;
+    height: 80vh;
+    & .eye-ball{
+        width: 15vw;
+        height: 15vw;
+        background-color: white;
+        border-radius: 100%;
+        & .eye{
+            width: 12vw;
+            height: 12vw;
+            background-color: #a6a6a648;
+            border-radius: 50%;
+            & .pupil{
+                width: 70%;
+                height: 70%;
+                background-color: #000000;
+                border-radius: 50%;
+                transition: all ease ;
+                & .pupil-dot{
+                    width: 15%;
+                    height: 15%;
+                    top: 3%;
+                    left: 40%;
+                }
+            }
+        }
+    }
+}
+.nm{
+    font-family: NeueMontreal-Medium;
+    /* font-weight: 600; */
+}
+.nr{
+    font-family: NeueMontreal-Regular;
+    /* font-weight: 600; */
+}
